@@ -12,21 +12,11 @@ def main():
     home=pd.read_csv(url)
     home=home.iloc[:-1]
     home=home.apply(pd.to_numeric)
+    
     fig=plt.figure(figsize=(10,8))
     plt.title('case')
     sns.heatmap(home.corr(),annot=True , cmap="Blues")
     st.pyplot(fig)
-
-
-
-
-
-
-
-
-
-
-
 
 #########################################################
     crim=st.number_input('inserisci crim',1,10000,500)
