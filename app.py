@@ -45,7 +45,7 @@ def main():
 
     lstat=st.number_input('inserisci istat',1,10,5)
 
-    load_model=joblib.load('./modello_home.pkl')
+    load_model=joblib.load('modello_home.pkl')
     pred=load_model.predict([[crim,zn,indus,chas,nox,rm,age,dis,rad,tax,ptratio,b,lstat,]])
     st.write(f"il prezzo é: euro{round(pred[0],2)}")
 
